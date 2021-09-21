@@ -1,8 +1,10 @@
+import Main from './Pages/Main'
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <main className="App">
+      <Main/>
+    </main>
   );
 }
 
