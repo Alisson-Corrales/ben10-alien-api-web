@@ -5,7 +5,7 @@ const Main = () => {
     return (
         <div>
             <h1>Aliens Database</h1>
-            <img src="/../Images/" alt="omnitrix" />
+            <img src="../Images/logo.png" alt="omnitrix" />
             <AlienGallery/>
         </div>
     )
