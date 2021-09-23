@@ -1,17 +1,40 @@
-import React, { useContext, useEffect } from 'react';
-const API_ENDPOINT = `https://ben10-api.herokuapp.com/aliens`
+import React, { useContext, useReducer, useEffect } from "react";
+import { reducer } from "./reducer";
+const API_ENDPOINT = `https://ben10-api.herokuapp.com/aliens`;
 
 const initialState = {
     loading: true,
     aliens: [],
-    query: 'react',
+    _id: [],
+    query: "react",
 };
 
-const EncycContext = React.createContext();
+const EncyContext = React.createContext();
 
-export const AppProvider = ({children}) => {
+export const AppProvider = ({ children }) => {
+    const [state, dispatch] = useReducer(reducer, initialState);
     const fetchAliens = async (url) => {
-        dispatch({ type: 'SET_LOADING' });
-        const response = await fetch(url);
-        const data = await response.json();
-        dispatch({ type: 'SET_ALIENS', payload: data });
+        dispatch({ type: "SET_LOADING" });
+        console.log('test');
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+            dispatch({ type: "SET_ALIENS", payload: data });
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    useEffect(() => {
+        console.log('test');
+        fetchAliens(`${API_ENDPOINT}`);
+    }, [state.query]);
+
+    return (
+        <EncyContext.Provider value={{ ...state }}>{children}</EncyContext.Provider>
+    );
+};
+
+export const useGlobalContext = () => {
+    return useContext(EncyContext);
+};
