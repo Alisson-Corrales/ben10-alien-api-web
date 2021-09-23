@@ -15,4 +15,3 @@ export const AppProvider = ({children}) => {
         const response = await fetch(url);
         const data = await response.json();
         dispatch({ type: 'SET_ALIENS', payload: data });
-    }
