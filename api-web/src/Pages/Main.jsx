@@ -3,9 +3,9 @@ import AlienGallery from '../Components/AlienGallery'
 
 const Main = () => {
     return (
-        <div>
+        <div className="everything">
             <h1>Aliens Database</h1>
-            <img src="../Images/logo.png" alt="omnitrix" />
+            <img src="../Images/logo.png" alt="omnitrix" id="omni" />
             <AlienGallery/>
         </div>
     )

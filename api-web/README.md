@@ -16,3 +16,8 @@
 
 ## day 4
 - images show up (only one but its progress)
+
+
+## day 5
+- working on styling 
+- got all images to appear!! (the ids were wrong on a few :3)

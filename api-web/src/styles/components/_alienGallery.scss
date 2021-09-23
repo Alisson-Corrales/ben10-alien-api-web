@@ -1,10 +1,37 @@
-@use '../themes/defaultTheme' as *;
-@use '../util/variables' as *;
-@use '../util/mixins' as *;
+@use "../themes/defaultTheme" as *;
+@use "../util/variables" as *;
+@use "../util/mixins" as *;
 
+.libGal {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 90%;
+  //grid-template-columns: 50% 50%;
 
-
-
-.libGal{
-    background: $white;
+  .gallery {
+    background: $black;
+    //background: $green;
+    border-radius: 2%;
+    padding: 2rem;
+    box-shadow: 5px 2px 15px $darkGreen;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+    img {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 1rem 0 0;
+    }
+    h2 {
+      display: flex;
+      justify-content: center;
+    }
+    li {
+      display: flex;
+    }
+    #ability{
+        display: grid;
+        grid-template-columns: 50%;
+    }
+  }
 }
