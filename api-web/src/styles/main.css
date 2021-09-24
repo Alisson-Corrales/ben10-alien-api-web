@@ -233,32 +233,85 @@ button, input[type=button] {
   grid-template-columns: 90%;
 }
 .libGal .gallery {
-  background: #0e0d0d;
+  background: #DFEEDD;
+  color: #0e0d0d;
   border-radius: 2%;
   padding: 2rem;
-  box-shadow: 4px 2px 15px #559e1a;
+  box-shadow: 5px 2px 15px #559e1a;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 .libGal .gallery img {
   display: flex;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
   margin: 1rem 1rem 0 0;
 }
 .libGal .gallery h2 {
   display: flex;
   justify-content: center;
+  margin: 1rem 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #5aac17;
 }
 .libGal .gallery ul {
-  display: grid;
+  margin-right: 1rem;
 }
-.libGal .gallery ul li {
-  display: flex;
-  grid-template-columns: 50% 50%;
+.libGal .gallery ul p {
+  margin-bottom: 0.3rem;
+  color: #5aac17;
+  font-size: 1.25rem;
+  font-weight: 550;
 }
-.libGal .gallery #ability {
+.libGal .gallery ul #alienSpecies {
+  margin: 0 0 0.75rem 0;
+}
+.libGal .gallery ul #alienWorld {
+  margin: 0 0 0.75rem 0;
+}
+.libGal .gallery ul #series {
+  margin: 0 0 0.75rem 0;
+}
+.libGal .gallery ul .ableGrid {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 55% 55%;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  row-gap: 0.25rem;
+}
+
+@media only screen and (min-width: 650px) {
+  .libGal {
+    grid-template-columns: 35% 35%;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .libGal .gallery {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .libGal {
+    grid-template-columns: 45% 45%;
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
+  .libGal .gallery {
+    margin-bottom: 0;
+  }
+  .libGal .gallery img {
+    max-width: 400px;
+    min-width: 400px;
+  }
+}
+.searchFunction {
+  background: #DFEEDD;
+  color: #559e1a;
+  border-radius: 2%;
+  padding: 0.25rem;
+  margin: 1rem 0 0.5rem 0;
 }
 
 .everything {

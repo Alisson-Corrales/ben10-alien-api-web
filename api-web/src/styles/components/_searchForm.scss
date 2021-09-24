@@ -1,0 +1,15 @@
+@use "../themes/defaultTheme" as *;
+@use "../util/variables" as *;
+@use "../util/mixins" as *;
+
+
+
+
+
+.searchFunction{
+    background: $lightestGreen;
+    color: $darkGreen;
+    border-radius: 2%;
+    padding: .25rem;
+    margin: 1rem 0 .5rem 0;
+}
